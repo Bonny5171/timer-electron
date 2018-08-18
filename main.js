@@ -10,7 +10,8 @@ app.on('ready', () => {
     });
 
     console.log(__dirname);
-    mainWindown.loadURL(`${__dirname}/app/index.html`);
+    //mainWindown.loadURL(`${__dirname}/app/index.html`);
+    mainWindown.loadURL(`file://${__dirname}/app/index-prd.html`);
 })
 
 // encerrando aplicação electron, quando clicar no botão fechar
@@ -31,5 +32,5 @@ ipcMain.on('abrir-janela-sobre', () => {
         })          
     }    
 
-    sobre.loadURL(`${__dirname}/app/sobre.html`);
+    sobre.loadURL(`file://${__dirname}/app/sobre.html`);
 })
