@@ -5,8 +5,8 @@ app.on('ready', () => {
     console.log('Aplicação iniciada');
 
     let mainWindown = new BrowserWindow({
-        width:600,
-        height:400
+        width:800,
+        height:600
     });
 
     console.log(__dirname);
