@@ -11,11 +11,20 @@ linkSobre.addEventListener('click', function(){
 let tempo =  document.querySelector('#tempo');
 let eventoPlay = ['play >>', 'stop |_|'];
 let btnTimer = document.querySelector('#play');
-btnTimer.addEventListener('click', function() {
+let play = false;
+btnTimer.addEventListener('click', () => {
     console.log('botão do timer clicado', btnTimer);
     eventoPlay.reverse();
     btnTimer.innerHTML = eventoPlay[0];
-    timer.iniciar(tempo);
+
+    if (play) {
+        timer.parar();
+        play = false;
+    }
+    else {
+        timer.iniciar(tempo);
+        play = true;
+    }
 })
 
 
