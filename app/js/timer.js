@@ -1,13 +1,13 @@
 const moment = require('moment');
 let segundos;
 let timer;
-// 00:12:32
+
 module.exports = {
     iniciar(el){
         let tempo = moment.duration(el.textContent);
         segundos = tempo.asSeconds();
         clearInterval(timer);
-        timer = setInterval(()=>{
+        timer = setInterval(()=> {
             segundos++;
             el.textContent = this.segundosParaTempo(segundos);
         }, 1000);
